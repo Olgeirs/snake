@@ -25,15 +25,11 @@ namespace Snake
             Point p4 = new Point(12, 15, '@');
             p4.Draw();
 
+            HorizontalLine line = new HorizontalLine(5,25,8,'-');
+            line.Draw();
 
-            List<Point> p = new List<Point>();
-            p.Add(p1);
-            p.Add(p2);
-            p.Add(p3);
-            p.Add(p4);
-
-
-
+            VerticalLine vline = new VerticalLine(5, 8, 28, '|');
+            vline.Draw();
 
 
             Console.ReadLine();
