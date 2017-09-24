@@ -22,6 +22,20 @@ namespace Snake
             p3.sym = '&';
             p3.Draw();
 
+            Point p4 = new Point(12, 15, '@');
+            p4.Draw();
+
+
+            List<Point> p = new List<Point>();
+            p.Add(p1);
+            p.Add(p2);
+            p.Add(p3);
+            p.Add(p4);
+
+
+
+
+
             Console.ReadLine();
         }
 
