@@ -22,11 +22,36 @@ namespace Snake
 
         }
 
+        public Point(Point p) {
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
+        }
+
+        public void Move(int offset, direction direction) {
+
+            if (direction == direction.right) {
+                x = x + offset;
+            } else if (direction == direction.left) {
+                x = x - offset;
+            } else if (direction == direction.up) {
+                y = y - offset;
+            } else if (direction== direction.down) {
+                y = y + offset;
+            }
+
+
+        }
+
         public void Draw ()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
         }
 
+        public void Clear() {
+            sym = ' ';
+            Draw();
+        }
     }
 }
