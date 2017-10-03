@@ -9,7 +9,7 @@ namespace Snake
     class Snake      : F
     {
 
-        direction direction;
+        public direction direction;
 
         public Snake(Point t, int len, direction _direction)
         {
@@ -44,6 +44,25 @@ namespace Snake
 
             nextpoint.Move(1, direction);
             return nextpoint;
+        }
+
+        public void key(ConsoleKey k) {
+            if (k == ConsoleKey.LeftArrow)
+            {
+                direction = direction.left;
+            }
+            else if (k == ConsoleKey.RightArrow)
+            {
+                direction = direction.right;
+            }
+            else if (k == ConsoleKey.UpArrow)
+            {
+                direction = direction.up;
+            }
+            else if (k == ConsoleKey.DownArrow)
+            {
+                direction = direction.down;
+            }
         }
     }
 }
